@@ -1,12 +1,14 @@
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
+import store from './store';
 import Posts from './components/Posts';
 import PostForm from './components/PostForm';
 import './App.css';
 
 function App() {
+
   return (
+    <Provider store={store}>
     <div className="App">
-      <img src={logo} className="App-logo" alt="logo" />
       <p>
         Edit <code>src/App.js</code> and save to reload.
       </p>
@@ -14,6 +16,7 @@ function App() {
       <hr/>
       <Posts />
     </div>
+    </Provider>
   );
 }
 
