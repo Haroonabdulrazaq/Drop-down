@@ -1,13 +1,9 @@
-const accountReducer = (state=0, action) => {
+const accountReducer = (state=100, action) => {
   switch (action.type) {
-    case 'DEPOSIT':
-      return {
-        ...state + action.paylaod
-      }
-    case 'WITHDRAW':
-      return {
-        ...state - action.paylaod
-      }
+    case 'deposit':
+      return state + action.payload
+    case 'withdraw':
+      return state - action.payload
     default:
       return state
   }
