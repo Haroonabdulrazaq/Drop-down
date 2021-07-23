@@ -1,0 +1,35 @@
+body {
+  background-color: #eee;
+  box-sizing: border-box;
+}
+.form {
+  height: 50vh;
+  width: 95%;
+  padding: 1em;
+  border: 1px solid coral;
+}
+
+.form-control {
+  margin: 1em;
+}
+
+input {
+  width: 30%;
+  height: 1vh;
+  padding: 1em;
+}
+
+input:focus {
+  border: none;
+}
+
+button {
+  border: none;
+  padding: 1em 1.5em;
+  background: teal;
+  color: #fff;
+  border-radius: 3px;
+}
+button:hover {
+  cursor: pointer;
+}
