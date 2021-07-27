@@ -1,20 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
+import { bindActionCreators } from 'redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { actionCreators } from '../state';
 
 import './post.css';
 
 const PostComponent = () => {
-  const [posts, setPosts] = useState([]);
+  // const posts =[]
+  const dispatch = useDispatch();
+  const { posts } = useSelector((state) => state);
+  console.log(posts);
 
   useEffect(() => {
+    const { fetchPost } = bindActionCreators(actionCreators, dispatch)
     axios.get("https://jsonplaceholder.typicode.com/posts")
     .then((res) => {
-      console.log(res.data)
-      setPosts(res.data)
+      // console.log(res.data)
+      // setPosts(res.data)
+      fetchPost(res.data)
     }).catch((err) => {
       console.log(err);
     })
-  }, [setPosts])
+  }, [dispatch])
 
 
   return (

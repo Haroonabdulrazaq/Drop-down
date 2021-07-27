@@ -6,16 +6,15 @@ body {
   height: 50vh;
   width: 95%;
   padding: 1em;
-  border: 1px solid coral;
 }
 
 .form-control {
   margin: 1em;
 }
 
-input {
+input, textarea {
   width: 30%;
-  height: 1vh;
+  min-height: 1vh;
   padding: 1em;
 }
 

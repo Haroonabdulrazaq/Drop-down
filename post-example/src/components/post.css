@@ -3,7 +3,6 @@ body {
   box-sizing: border-box;
 }
 .post-wrapper {
-  border: 1px solid chartreuse;
   width: 95%;
   min-height: 100vh;
   margin: 0 auto;
