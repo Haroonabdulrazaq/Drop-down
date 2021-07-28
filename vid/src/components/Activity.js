@@ -6,7 +6,6 @@ const Activity = (props) => {
   const { name, duration } = props;
 
   const handleDelete = () => {
-    console.log("I am deleting...", props);
     dispatch({
       type: 'REMOVE_ACTIVITY',
       payload: props.id

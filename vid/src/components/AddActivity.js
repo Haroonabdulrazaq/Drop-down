@@ -16,7 +16,6 @@ const AddActivity = () => {
   }
   const addActivity = () => {
     data.id = new Date().getTime()
-    console.log(data);
     dispatch({ type: 'ADD_ACTIVITY' , payload: data })
     setData({
       name: '',
